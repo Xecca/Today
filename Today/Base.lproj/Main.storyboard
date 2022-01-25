@@ -23,29 +23,41 @@
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="99"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NLO-za-kaN">
-                                            <rect key="frame" x="20" y="28" width="44" height="44"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NLO-za-kaN">
+                                            <rect key="frame" x="20" y="27.5" width="44" height="44"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="NLO-za-kaN" secondAttribute="height" multiplier="1:1" id="oU7-g3-t1Q"/>
+                                                <constraint firstAttribute="width" constant="44" id="x97-Qf-ffM"/>
+                                            </constraints>
                                             <state key="normal" title="Button"/>
                                             <buttonConfiguration key="configuration" style="plain">
                                                 <backgroundConfiguration key="background" image="circle" catalog="system"/>
                                             </buttonConfiguration>
                                         </button>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RPn-dm-YIA">
-                                            <rect key="frame" x="87" y="28" width="33" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RPn-dm-YIA">
+                                            <rect key="frame" x="72" y="20" width="33" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="awN-RC-FSC">
-                                            <rect key="frame" x="87" y="57" width="36" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="awN-RC-FSC">
+                                            <rect key="frame" x="72" y="49" width="36" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="awN-RC-FSC" secondAttribute="trailing" constant="20" symbolic="YES" id="0D8-3H-LQ4"/>
+                                        <constraint firstItem="RPn-dm-YIA" firstAttribute="leading" secondItem="NLO-za-kaN" secondAttribute="trailing" constant="8" symbolic="YES" id="MuQ-PT-keT"/>
+                                        <constraint firstItem="NLO-za-kaN" firstAttribute="leading" secondItem="YON-is-mSU" secondAttribute="leading" constant="20" symbolic="YES" id="QaD-P4-9eZ"/>
+                                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="RPn-dm-YIA" secondAttribute="trailing" constant="20" symbolic="YES" id="RGk-gr-nOi"/>
+                                        <constraint firstItem="RPn-dm-YIA" firstAttribute="top" secondItem="YON-is-mSU" secondAttribute="top" constant="20" symbolic="YES" id="Si3-Zg-8Rd"/>
+                                        <constraint firstItem="awN-RC-FSC" firstAttribute="top" secondItem="RPn-dm-YIA" secondAttribute="bottom" constant="8" symbolic="YES" id="bqt-8b-piZ"/>
+                                        <constraint firstItem="awN-RC-FSC" firstAttribute="leading" secondItem="RPn-dm-YIA" secondAttribute="leading" id="eIP-f9-L1Q"/>
+                                        <constraint firstItem="NLO-za-kaN" firstAttribute="centerY" secondItem="YON-is-mSU" secondAttribute="centerY" id="nX6-yp-ax6"/>
+                                        <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="awN-RC-FSC" secondAttribute="bottom" constant="20" symbolic="YES" id="yk4-I2-fdU"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
