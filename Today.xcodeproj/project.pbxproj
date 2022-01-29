@@ -17,6 +17,7 @@
 		9515CF9127A0A9DA004D9508 /* ReminderListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9515CF9027A0A9DA004D9508 /* ReminderListCell.swift */; };
 		9515CF9327A1F1C7004D9508 /* ReminderDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9515CF9227A1F1C7004D9508 /* ReminderDetailViewController.swift */; };
 		9515CF9527A3ABD4004D9508 /* ReminderListDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9515CF9427A3ABD4004D9508 /* ReminderListDataSource.swift */; };
+		9515CF9727A541A7004D9508 /* ReminderDetailViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9515CF9627A541A7004D9508 /* ReminderDetailViewDataSource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		9515CF9027A0A9DA004D9508 /* ReminderListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderListCell.swift; sourceTree = "<group>"; };
 		9515CF9227A1F1C7004D9508 /* ReminderDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderDetailViewController.swift; sourceTree = "<group>"; };
 		9515CF9427A3ABD4004D9508 /* ReminderListDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderListDataSource.swift; sourceTree = "<group>"; };
+		9515CF9627A541A7004D9508 /* ReminderDetailViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderDetailViewDataSource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 				9515CF7C27A07F76004D9508 /* ReminderListViewController.swift */,
 				9515CF9427A3ABD4004D9508 /* ReminderListDataSource.swift */,
 				9515CF9227A1F1C7004D9508 /* ReminderDetailViewController.swift */,
+				9515CF9627A541A7004D9508 /* ReminderDetailViewDataSource.swift */,
 				9515CF7E27A07F76004D9508 /* Main.storyboard */,
 				9515CF9027A0A9DA004D9508 /* ReminderListCell.swift */,
 				9515CF8E27A0853A004D9508 /* Reminder.swift */,
@@ -154,6 +157,7 @@
 				9515CF9127A0A9DA004D9508 /* ReminderListCell.swift in Sources */,
 				9515CF7927A07F76004D9508 /* AppDelegate.swift in Sources */,
 				9515CF9327A1F1C7004D9508 /* ReminderDetailViewController.swift in Sources */,
+				9515CF9727A541A7004D9508 /* ReminderDetailViewDataSource.swift in Sources */,
 				9515CF7B27A07F76004D9508 /* SceneDelegate.swift in Sources */,
 				9515CF8F27A0853A004D9508 /* Reminder.swift in Sources */,
 				9515CF9527A3ABD4004D9508 /* ReminderListDataSource.swift in Sources */,
