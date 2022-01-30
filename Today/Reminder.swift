@@ -16,7 +16,6 @@ struct Reminder {
 
 extension Reminder {
     static var testData = [
-        Reminder(title: "", dueDate: Date().addingTimeInterval(0)),
         Reminder(title: "Finish the UIKit course", dueDate: Date().addingTimeInterval(700.0), notes: "Add an app to repository.", isComplete: false),
         Reminder(title: "Submit reimbursement report", dueDate: Date().addingTimeInterval(800.0), notes: "Don't forget about taxi receipts"),
         Reminder(title: "Code review", dueDate: Date().addingTimeInterval(14000.0), notes: "Check tech specs in shared folder", isComplete: true),
