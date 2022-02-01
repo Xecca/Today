@@ -80,8 +80,25 @@
                             </connections>
                         </barButtonItem>
                     </toolbarItems>
-                    <navigationItem key="navigationItem" id="0oL-gO-uxd"/>
+                    <navigationItem key="navigationItem" id="0oL-gO-uxd">
+                        <nil key="title"/>
+                        <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="REn-8f-nSs">
+                            <rect key="frame" x="117.5" y="5.5" width="179" height="33"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <segments>
+                                <segment title="Today"/>
+                                <segment title="Future"/>
+                                <segment title="All"/>
+                            </segments>
+                            <connections>
+                                <action selector="segmentControlChanged:" destination="Pba-Bk-rsE" eventType="valueChanged" id="8Yl-aW-HjP"/>
+                            </connections>
+                        </segmentedControl>
+                    </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="filterSegmentedControl" destination="REn-8f-nSs" id="pch-BE-kFH"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RJ1-5B-bL0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
