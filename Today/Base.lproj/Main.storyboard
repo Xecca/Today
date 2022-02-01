@@ -15,9 +15,48 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="jIQ-Ad-okd" userLabel="Progress Header View">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="414"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F6X-S0-eTu" userLabel="Progress Container View">
+                                    <rect key="frame" x="62" y="0.0" width="290" height="414"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tRl-gf-pF4" userLabel="Percent Complete View">
+                                            <rect key="frame" x="0.0" y="268" width="290" height="146"/>
+                                            <color key="backgroundColor" systemColor="systemTealColor"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="146" id="EP4-q7-61f"/>
+                                            </constraints>
+                                        </view>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wbl-1c-jJH" userLabel="Percent Incomplete View">
+                                            <rect key="frame" x="0.0" y="0.0" width="290" height="268"/>
+                                            <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                                        </view>
+                                    </subviews>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstItem="tRl-gf-pF4" firstAttribute="top" secondItem="wbl-1c-jJH" secondAttribute="bottom" id="2fl-vU-gOZ"/>
+                                        <constraint firstItem="wbl-1c-jJH" firstAttribute="top" secondItem="F6X-S0-eTu" secondAttribute="top" id="TLr-o0-S5a"/>
+                                        <constraint firstAttribute="bottom" secondItem="tRl-gf-pF4" secondAttribute="bottom" id="cHE-WG-YZV"/>
+                                        <constraint firstItem="tRl-gf-pF4" firstAttribute="leading" secondItem="F6X-S0-eTu" secondAttribute="leading" id="ljM-8D-9H4"/>
+                                        <constraint firstAttribute="trailing" secondItem="tRl-gf-pF4" secondAttribute="trailing" id="oEe-xy-OAo"/>
+                                        <constraint firstAttribute="trailing" secondItem="wbl-1c-jJH" secondAttribute="trailing" id="rJi-5g-Nfa"/>
+                                        <constraint firstItem="wbl-1c-jJH" firstAttribute="leading" secondItem="F6X-S0-eTu" secondAttribute="leading" id="ssZ-NR-6TP"/>
+                                        <constraint firstAttribute="width" secondItem="F6X-S0-eTu" secondAttribute="height" multiplier="145:207" id="xVk-ih-zmo"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemGreenColor"/>
+                            <constraints>
+                                <constraint firstItem="F6X-S0-eTu" firstAttribute="centerY" secondItem="jIQ-Ad-okd" secondAttribute="centerY" id="NVn-2i-jzo"/>
+                                <constraint firstItem="F6X-S0-eTu" firstAttribute="width" secondItem="jIQ-Ad-okd" secondAttribute="width" multiplier="0.7" id="Vaw-pg-5Mr"/>
+                                <constraint firstItem="F6X-S0-eTu" firstAttribute="centerX" secondItem="jIQ-Ad-okd" secondAttribute="centerX" id="qrP-W7-9jc"/>
+                            </constraints>
+                        </view>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="ReminderListCell" rowHeight="99" id="orK-8m-wTh" customClass="ReminderListCell" customModule="Today" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="44.5" width="414" height="99"/>
+                                <rect key="frame" x="0.0" y="458.5" width="414" height="99"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="orK-8m-wTh" id="YON-is-mSU">
                                     <rect key="frame" x="0.0" y="0.0" width="385.5" height="99"/>
@@ -82,7 +121,7 @@
                     </toolbarItems>
                     <navigationItem key="navigationItem" id="0oL-gO-uxd">
                         <nil key="title"/>
-                        <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="REn-8f-nSs">
+                        <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="REn-8f-nSs">
                             <rect key="frame" x="117.5" y="5.5" width="179" height="33"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <segments>
@@ -98,6 +137,10 @@
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="filterSegmentedControl" destination="REn-8f-nSs" id="pch-BE-kFH"/>
+                        <outlet property="percentCompleteHeightConstraint" destination="EP4-q7-61f" id="vEq-kG-wEc"/>
+                        <outlet property="percentCompleteView" destination="tRl-gf-pF4" id="dJJ-H5-jpp"/>
+                        <outlet property="percentIncompleteView" destination="wbl-1c-jJH" id="Y1A-al-zOa"/>
+                        <outlet property="progressContainerView" destination="F6X-S0-eTu" id="sMy-vd-5rG"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RJ1-5B-bL0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -248,6 +291,15 @@
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemIndigoColor">
+            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemTealColor">
+            <color red="0.18823529411764706" green="0.69019607843137254" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
