@@ -65,7 +65,7 @@ class ReminderDetailEditDataSource: NSObject {
     }
     
     private func dequeueAndConfigureCell(for indexPath: IndexPath, from tableView: UITableView) -> UITableViewCell {
-        guard let section = ReminderSection(rawValue: indexPath.row) else {
+        guard let section = ReminderSection(rawValue: indexPath.section) else {
             fatalError("Section index out of range.")
         }
         let identifier = section.cellIndentifier(for: indexPath.row)
